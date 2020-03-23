@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script src="jquery.bpopup.min.js">
+
+</script>
+<script src="jquery.js"></script>
+<script src="content1.js"></script>
+
+
+    </head>
+
+<body>
+
+    <div id="element_to_pop_up">
+        <div class="tools">
+        <button type="button" class="spam">
+        <span>Spam Checker</span</button>
+        
+        <button type="button" class="link">
+        <span>Link Analyzer</span</button>
+        
+        <button type="button" class="email">
+        <span>Email Analyzer</span</button>
+        </div>
+        <p>
+     <div class="send_test">
+        <label>Send Test Emails:<input class="ip"  type="text" onkeyup="recipient()"> </label>
+        <input class="button" type="button" value="Send Test Emails" style="background:SkyBlue" >
+        </div>
+        </p>
+        <div id="' + settingsID + 'firstbump"><div id="' + settingsID + 'fc" style="overflow: hidden"><label class="g_checkbox" style="float:left; margin-right:3px; padding-top:2px"><input type="checkbox" id="' + settingsID + 'FirstBumpBox"><span></span></label><div style="overflow:hidden; padding-left: 2px;"><span>After</span> <input type=text size=2 id="' + settingsID + 'FirstBumpDays" name="FirstBumpDays" value=""> <span>days if</span> <select name="FirstBumpAction" id="' + settingsID + 'FirstBumpAction"><option value="r">No Reply</option><option value="o">No Open</option><option value="c">No Click</option><option value="a">All</option></select><br /><label class="g_radio"><input type="radio" id="' + settingsID + 'FirstBumpChoicet" name="FirstBumpChoice" value="t"> <span style="font-size:8pt">Send text above original:</span></label><br /><textarea id="' + settingsID + 'FirstBumpAddedText" cols=34 rows=7></textarea><div><label class="g_radio"><input type="radio" id="' + settingsID + 'FirstBumpChoicec" name="FirstBumpChoice" value="c"> <span id="' + settingsID + 'CM1" style="font-size:8pt">Send custom message above original:</span></label><div id="' + settingsID + 'FirstBumpCustomDiv"><select style="width: 260px; font-size:8pt" id="' + settingsID + 'FirstBumpCustom" name="FirstBumpCustom"><option></option></select></div></div></div></div></div> \
+        <div id="' + settingsID + 'addsecondbump" style="margin-top: 6px;"><a style="cursor:pointer;color:blue;text-decoration:underline;">+ Show 2nd Stage</a></div> \
+        <div id="' + settingsID + 'secondbump"><div id="' + settingsID + 'sc" style="overflow: hidden"><label class="g_checkbox" style="float:left; margin-right:3px; padding-top:2px"><input type="checkbox" id="' + settingsID + 'SecondBumpBox"><span></span></label><div style="overflow:hidden; padding-left: 2px;"><span>After</span> <input type=text size=2 id="' + settingsID + 'SecondBumpDays" name="SecondBumpDays" value=""> <span>days if</span> <select name="SecondBumpAction" id="' + settingsID + 'SecondBumpAction"><option value="r">No Reply</option><option value="o">No Open</option><option value="c">No Click</option><option value="a">All</option></select><br /><label class="g_radio"><input type="radio" id="' + settingsID + 'SecondBumpChoicet" name="SecondBumpChoice" value="t"> <span style="font-size:8pt">Send text above original:</span></label><br /><textarea id="' + settingsID + 'SecondBumpAddedText" cols=34 rows=7></textarea><div><label class="g_radio"><input type="radio" id="' + settingsID + 'SecondBumpChoicec" name="SecondBumpChoice" value="c"> <span id="' + settingsID + 'CM2" style="font-size:8pt">Send custom message above original:</span></label><div id="' + settingsID + 'SecondBumpCustomDiv"><select style="width: 260px; font-size:8pt" id="' + settingsID + 'SecondBumpCustom" name="SecondBumpCustom"><option></option></select></div></div></div></div></div> \
+        <div id="' + settingsID + 'addthirdbump" style="margin-top: 6px;"><a style="cursor:pointer;color:blue;text-decoration:underline;">+ Show 3rd Stage</a></div> \
+        <div id="' + settingsID + 'thirdbump"><div id="' + settingsID + 'tc" style="overflow: hidden"><label class="g_checkbox" style="float:left; margin-right:3px; padding-top:2px"><input type="checkbox" id="' + settingsID + 'ThirdBumpBox"><span></span></label><div style="overflow:hidden; padding-left: 2px;"><span>After</span> <input type=text size=2 id="' + settingsID + 'ThirdBumpDays" name="ThirdBumpDays" value=""> <span>days if</span> <select name="ThirdBumpAction" id="' + settingsID + 'ThirdBumpAction"><option value="r">No Reply</option><option value="o">No Open</option><option value="c">No Click</option><option value="a">All</option></select><br /><label class="g_radio"><input type="radio" id="' + settingsID + 'ThirdBumpChoicet" name="ThirdBumpChoice" value="t"> <span style="font-size:8pt">Send text above original:</span></label><br /><textarea id="' + settingsID + 'ThirdBumpAddedText" cols=34 rows=7></textarea><div><label class="g_radio"><input type="radio" id="' + settingsID + 'ThirdBumpChoicec" name="ThirdBumpChoice" value="c"> <span id="' + settingsID + 'CM3" style="font-size:8pt">Send custom message above original:</span></label><div id="' + settingsID + 'ThirdBumpCustomDiv"><select style="width: 260px; font-size:8pt" id="' + settingsID + 'ThirdBumpCustom" name="ThirdBumpCustom"><option></option></select></div></div></div></div></div> \
+        <div id="' + settingsID + 'addfourthbump" style="margin-top: 6px;"><a style="cursor:pointer;color:blue;text-decoration:underline;">+ Show 4th Stage</a></div> \
+        <div id="' + settingsID + 'fourthbump"><div id="' + settingsID + '4c" style="overflow: hidden"><label class="g_checkbox" style="float:left; margin-right:3px; padding-top:2px"><input type="checkbox" id="' + settingsID + 'FourthBumpBox"><span></span></label><div style="overflow:hidden; padding-left: 2px;"><span>After</span> <input type=text size=2 id="' + settingsID + 'FourthBumpDays" name="FourthBumpDays" value=""> <span>days if</span> <select name="FourthBumpAction" id="' + settingsID + 'FourthBumpAction"><option value="r">No Reply</option><option value="o">No Open</option><option value="c">No Click</option><option value="a">All</option></select><br /><label class="g_radio"><input type="radio" id="' + settingsID + 'FourthBumpChoicet" name="FourthBumpChoice" value="t"> <span style="font-size:8pt">Send text above original:</span></label><br /><textarea id="' + settingsID + 'FourthBumpAddedText" cols=34 rows=7></textarea><div><label class="g_radio"><input type="radio" id="' + settingsID + 'FourthBumpChoicec" name="FourthBumpChoice" value="c"> <span id="' + settingsID + 'CM4" style="font-size:8pt">Send custom message above original:</span></label><div id="' + settingsID + 'FourthBumpCustomDiv"><select style="width: 260px; font-size:8pt" id="' + settingsID + 'FourthBumpCustom" name="FourthBumpCustom"><option></option></select></div></div></div></div></div> \
+        <div id="' + settingsID + 'addfifthbump" style="margin-top: 6px;"><a style="cursor:pointer;color:blue;text-decoration:underline;">+ Show 5th Stage</a></div> \
+        <div id="' + settingsID + 'fifthbump"><div id="' + settingsID + '5c" style="overflow: hidden"><label class="g_checkbox" style="float:left; margin-right:3px; padding-top:2px"><input type="checkbox" id="' + settingsID + 'FifthBumpBox"><span></span></label><div style="overflow:hidden; padding-left: 2px;"><span>After</span> <input type=text size=2 id="' + settingsID + 'FifthBumpDays" name="FifthBumpDays" value=""> <span>days if</span> <select name="FifthBumpAction" id="' + settingsID + 'FifthBumpAction"><option value="r">No Reply</option><option value="o">No Open</option><option value="c">No Click</option><option value="a">All</option></select><br /><label class="g_radio"><input type="radio" id="' + settingsID + 'FifthBumpChoicet" name="FifthBumpChoice" value="t"> <span style="font-size:8pt">Send text above original:</span></label><br /><textarea id="' + settingsID + 'FifthBumpAddedText" cols=34 rows=7></textarea><div><label class="g_radio"><input type="radio" id="' + settingsID + 'FifthBumpChoicec" name="FifthBumpChoice" value="c"> <span id="' + settingsID + 'CM5" style="font-size:8pt">Send custom message above original:</span></label><div id="' + settingsID + 'FifthBumpCustomDiv"><select style="width: 260px; font-size:8pt" id="' + settingsID + 'FifthBumpCustom" name="FifthBumpCustom"><option></option></select></div></div></div></div></div> \
+        <div id="' + settingsID + 'addsixthbump" style="margin-top: 6px;"><a style="cursor:pointer;color:blue;text-decoration:underline;">+ Show 6th Stage</a></div> \
+        <div id="' + settingsID + 'sixthbump"><div id="' + settingsID + '6c" style="overflow: hidden"><label class="g_checkbox" style="float:left; margin-right:3px; padding-top:2px"><input type="checkbox" id="' + settingsID + 'SixthBumpBox"><span></span></label><div style="overflow:hidden; padding-left: 2px;"><span>After</span> <input type=text size=2 id="' + settingsID + 'SixthBumpDays" name="SixthBumpDays" value=""> <span>days if</span> <select name="SixthBumpAction" id="' + settingsID + 'SixthBumpAction"><option value="r">No Reply</option><option value="o">No Open</option><option value="c">No Click</option><option value="a">All</option></select><br /><label class="g_radio"><input type="radio" id="' + settingsID + 'SixthBumpChoicet" name="SixthBumpChoice" value="t"> <span style="font-size:8pt">Send text above original:</span></label><br /><textarea id="' + settingsID + 'SixthBumpAddedText" cols=34 rows=7></textarea><div><label class="g_radio"><input type="radio" id="' + settingsID + 'SixthBumpChoicec" name="SixthBumpChoice" value="c"> <span id="' + settingsID + 'CM6" style="font-size:8pt">Send custom message above original:</span></label><div id="' + settingsID + 'SixthBumpCustomDiv"><select style="width: 260px; font-size:8pt" id="' + settingsID + 'SixthBumpCustom" name="SixthBumpCustom"><option></option></select></div></div></div></div></div> \
+        <div id="' + settingsID + 'addseventhbump" style="margin-top: 6px;"><a style="cursor:pointer;color:blue;text-decoration:underline;">+ Show 7th Stage</a></div> \
+        <div id="' + settingsID + 'seventhbump"><div id="' + settingsID + '7c" style="overflow: hidden"><label class="g_checkbox" style="float:left; margin-right:3px; padding-top:2px"><input type="checkbox" id="' + settingsID + 'SeventhBumpBox"><span></span></label><div style="overflow:hidden; padding-left: 2px;"><span>After</span> <input type=text size=2 id="' + settingsID + 'SeventhBumpDays" name="SeventhBumpDays" value=""> <span>days if</span> <select name="SeventhBumpAction" id="' + settingsID + 'SeventhBumpAction"><option value="r">No Reply</option><option value="o">No Open</option><option value="c">No Click</option><option value="a">All</option></select><br /><label class="g_radio"><input type="radio" id="' + settingsID + 'SeventhBumpChoicet" name="SeventhBumpChoice" value="t"> <span style="font-size:8pt">Send text above original:</span></label><br /><textarea id="' + settingsID + 'SeventhBumpAddedText" cols=34 rows=7></textarea><div><label class="g_radio"><input type="radio" id="' + settingsID + 'SeventhBumpChoicec" name="SeventhBumpChoice" value="c"> <span id="' + settingsID + 'CM7" style="font-size:8pt">Send custom message above original:</span></label><div id="' + settingsID + 'SeventhBumpCustomDiv"><select style="width: 260px; font-size:8pt" id="' + settingsID + 'SeventhBumpCustom" name="SeventhBumpCustom"><option></option></select></div></div></div></div></div> \
+        <div id="' + settingsID + 'addeighthbump" style="margin-top: 6px;"><a style="cursor:pointer;color:blue;text-decoration:underline;">+ Show 8th Stage</a></div> \
+        <div id="' + settingsID + 'eighthbump"><div id="' + settingsID + '8c" style="overflow: hidden"><label class="g_checkbox" style="float:left; margin-right:3px; padding-top:2px"><input type="checkbox" id="' + settingsID + 'EighthBumpBox"><span></span></label><div style="overflow:hidden; padding-left: 2px;"><span>After</span> <input type=text size=2 id="' + settingsID + 'EighthBumpDays" name="EighthBumpDays" value=""> <span>days if</span> <select name="EighthBumpAction" id="' + settingsID + 'EighthBumpAction"><option value="r">No Reply</option><option value="o">No Open</option><option value="c">No Click</option><option value="a">All</option></select><br /><label class="g_radio"><input type="radio" id="' + settingsID + 'EighthBumpChoicet" name="EighthBumpChoice" value="t"> <span style="font-size:8pt">Send text above original:</span></label><br /><textarea id="' + settingsID + 'EighthBumpAddedText" cols=34 rows=7></textarea><div><label class="g_radio"><input type="radio" id="' + settingsID + 'EighthBumpChoicec" name="EighthBumpChoice" value="c"> <span id="' + settingsID + 'CM8" style="font-size:8pt">Send custom message above original:</span></label><div id="' + settingsID + 'EighthBumpCustomDiv"><select style="width: 260px; font-size:8pt" id="' + settingsID + 'EighthBumpCustom" name="EighthBumpCustom"><option></option></select></div></div></div></div></div>'
+    </div>
+        <style>
+        
+        .tools{
+            text-align:center;
+        }
+        #element_to_pop_up { 
+            display:none; }
+
+
+      </style>
+      
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
